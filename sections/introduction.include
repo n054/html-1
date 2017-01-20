@@ -212,7 +212,7 @@
   * Authors can extend APIs using the JavaScript prototyping mechanism. This is widely used by
     script libraries, for instance.
 
-<h3 id="html-vs-xhtml">HTML vs XHTML</h3>
+<h3 id="html-vs-xhtml">HTML vs XML Syntax</h3>
 
   <em>This section is non-normative.</em>
 
@@ -357,7 +357,7 @@
     Other code fragments are marked up <code>like this</code>.
 
     Byte sequences with bytes in the range 0x00 to 0x7F, inclusive, are marked up like
-    `<code>this</code>`.
+    `this`.
 
     Variables are marked up like <var>this</var>.
 
@@ -482,7 +482,7 @@
   <a lt="attribute">Attributes</a> are placed inside the start tag, and consist of a
   <a lt="attribute names">name</a> and a <a lt="attribute values">value</a>, separated by an
   "<code>=</code>" character. The attribute value can remain <a>unquoted</a> if it doesn't contain
-  <a>space characters</a> or any of <code>"</code> <code>'</code> <code>`</code> <code>=</code>
+  [=space characters=] or any of <code>"</code> <code>'</code> <code>&#x60;</code> <code>=</code>
   <code>&lt;</code> or <code>&gt;</code>. Otherwise, it has to be quoted using either single or
   double quotes. The value, along with the "<code>=</code>" character, can be omitted altogether if
   the value is the empty string.
@@ -567,8 +567,8 @@
   because the source contains a number of spaces (represented here by "&#x2423;") and line breaks
   ("&#x23CE;") that all end up as {{Text}} nodes in the DOM. However, for historical
   reasons not all of the spaces and line breaks in the original markup appear in the DOM. In
-  particular, all the whitespace before <{head}> start tag ends up being dropped silently, and all
-  the whitespace after the <{body}> end tag ends up placed at the end of the <{body}>.
+  particular, all the white space before <{head}> start tag ends up being dropped silently, and all
+  the white space after the <{body}> end tag ends up placed at the end of the <{body}>.
 
   The <{head}> element contains a <{title}> element, which itself
   contains a {{Text}} node with the text "Sample page". Similarly, the <{body}> element
@@ -1022,7 +1022,7 @@
       user agents, and are therefore marked as non-conforming to help authors avoid them.
 
       <p class="example">
-        For example, this is why the U+0060 GRAVE ACCENT character (`) is not allowed in unquoted
+        For example, this is why the U+0060 GRAVE ACCENT character (&#x60;) is not allowed in unquoted
         attributes. In certain legacy user agents, it is sometimes treated as a quote character.
       </p>
 
